@@ -1,0 +1,3 @@
+FROM  ubuntu:latest
+ENTRYPOINT ["echo","helloworld"]
+CMD  ["echo","welcome"]

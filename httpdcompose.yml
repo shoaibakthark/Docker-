@@ -1,0 +1,26 @@
+version: "3"
+networks:
+  netw1:
+volumes:
+  dsa:
+services:
+  web1:
+    image: httpd:latest
+    container_name : mycd
+    ports:
+      - "8082:80"
+    volumes:
+      - /host/asd:/container/data
+    networks:
+      - netw1
+  web2:
+    image: nginx:latest
+    container_name : myd
+    ports:
+      - "2024:80"
+    volumes:
+      - dsa:/data
+    networks:
+      - netw1
+
+

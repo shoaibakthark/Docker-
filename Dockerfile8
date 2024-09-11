@@ -1,0 +1,7 @@
+FROM  almalinux:latest
+RUN dnf update -y &&  dnf  install httpd -y
+COPY  spering-html   /var/www/html/
+EXPOSE 80
+CMD ["/usr/sbin/httpd","-D","FORGROUND"]
+
+ 

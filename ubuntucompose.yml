@@ -1,0 +1,15 @@
+version : "3"
+services:
+  ub1:
+    image: ubnginx
+    container_name: ubng
+    ports:
+      - "2025:80"
+    volumes:
+      - sd:/container/data
+    networks:
+      - netw1
+networks:
+  netw1:
+volumes:
+  sd:
